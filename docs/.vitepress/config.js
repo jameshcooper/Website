@@ -35,5 +35,12 @@ export default defineConfig({
   themeConfig: {
     lastUpdated: true,
     lastUpdatedText: 'Updated',
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/jameshcooper/Website' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/jameshcooper1' },
+      { icon: 'instagram', link: 'https://instagram.com/jameshcooper/' },
+      { icon: 'facebook', link: 'https://facebook.com/jameshcooper' },
+      { icon: 'x', link: 'https://x.com/jameshcooper' },
+    ],
   },
 })
