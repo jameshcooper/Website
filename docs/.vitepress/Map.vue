@@ -15,6 +15,7 @@ const props = defineProps(['map'])
 const locations = {
   noosa: [153.10471635680273, -26.379446409041275],
   brighton: [-0.08301807205713319, 50.861667179460675],
+  napier: [176.91818757121882, -39.489296708452656],
 }
 
 const getCoords = () => {
@@ -23,7 +24,7 @@ const getCoords = () => {
   }
 
   if (typeof props.map === 'number') {
-    const arr = [locations.noosa, locations.brighton]
+    const arr = [locations.noosa, locations.brighton, locations.napier]
     return arr[props.map] || locations.noosa
   }
 

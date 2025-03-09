@@ -9,6 +9,9 @@ hero:
     alt: Lake Taupō
 ---
 
+## 2023
+
+[Napier - New Zealand](./napier-art-deco.md)
 
 ## 2017
 

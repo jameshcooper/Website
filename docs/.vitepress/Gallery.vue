@@ -25,9 +25,10 @@ import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 import noosa from './gallery-noosa.json'
 import seagulls from './gallery-seagulls.json'
+import napier from './gallery-napier.json'
 
 const props = defineProps(['album', 'sliceStart', 'sliceEnd'])
-const arr = [noosa, seagulls]
+const arr = [noosa, seagulls, napier]
 const items = arr[props.album]
 
 const sliceStart = parseInt(props.sliceStart) || 0
