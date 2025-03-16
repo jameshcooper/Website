@@ -4,8 +4,11 @@ layout: home
 hero:
   name: James Cooper
   tagline: Personal homepage
-  image: 
-    src: https://img-jhc.global.ssl.fastly.net/am.jpeg
+  image_am: 
+    src: https://img-jhc.global.ssl.fastly.net/am.jpg
+    alt: Te Mata Peak
+  image_pm:
+    src: https://img-jhc.global.ssl.fastly.net/pm.jpg
     alt: Lake Taupō
 ---
 
