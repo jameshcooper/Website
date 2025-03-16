@@ -35,7 +35,7 @@ const checkIsMobile = () => {
       <div class="image">
         <div class="image-container">
           <div class="image-bg"></div>
-          <img class="VPImage image-src" :src="frontmatter.hero.image.src" :alt="frontmatter.hero.image.alt">
+          <ImageRotate :album="frontmatter.hero"/>
         </div>
       </div>
     </template>
