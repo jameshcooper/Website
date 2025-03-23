@@ -29,4 +29,4 @@ This spirit is palpable in the vibrant atmosphere and the delight locals have in
 
 If you're interested in architecture, or simply want to experience a place unlike any other, Napier is a must-visit destination.
 
-<Gallery album=2 sliceStart=7 sliceEnd=15 />
+<Gallery album=2 display=2 sliceStart=7 sliceEnd=15 />

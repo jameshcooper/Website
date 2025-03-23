@@ -1,11 +1,11 @@
 <template>
-  <ul id="gallery">
+  <ul :id="props.display == 2 ? 'thumb' : 'gallery'">
     <li
       v-for="(item, index) in displayedItems"
       :key="index"
       @click="showImage(index)"
     >
-      <img :src="item.thumb" :alt="item.alt" />
+      <img :src="item.thumb" :alt="item.title" />
     </li>
   </ul>
   <VueEasyLightbox
@@ -14,9 +14,6 @@
     :index="currentIndex"
     @hide="onHide"
   >
-    <template #toolbar>
-      <button @click="visibleRef = false">Close</button>
-    </template>
   </VueEasyLightbox>
 </template>
 
@@ -27,7 +24,7 @@ import noosa from './gallery-noosa.json'
 import seagulls from './gallery-seagulls.json'
 import napier from './gallery-napier.json'
 
-const props = defineProps(['album', 'sliceStart', 'sliceEnd'])
+const props = defineProps(['album', 'display', 'sliceStart', 'sliceEnd'])
 const arr = [noosa, seagulls, napier]
 const items = arr[props.album]
 
@@ -58,7 +55,7 @@ const onHide = () => {
   margin: 0;
 }
 
-li {
+#gallery li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,10 +65,36 @@ li {
   cursor: pointer;
 }
 
+#thumb {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 4px;
+  padding: 8px;
+  list-style-type: none;
+  margin: 0;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  align-items: center;
+}
+
+#thumb li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  flex: 0 0 100px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 2px;
 }
 </style>
